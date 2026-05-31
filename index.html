@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electrobirras</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ticker-bar">
+    <div class="ticker-track">
+      <span class="ticker-item">Diseño Web</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">SEO</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Google Ads</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Landing Pages</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Tiendas Online</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Redes Sociales</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Mantenimiento</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Código a medida</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Diseño Web</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">SEO</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Google Ads</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Landing Pages</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Tiendas Online</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Redes Sociales</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Mantenimiento</span><span class="ticker-sep">◆</span>
+      <span class="ticker-item">Código a medida</span><span class="ticker-sep">◆</span>
+    </div>
+  </div>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <div class="grid-floor" aria-hidden="true"></div>
+  <div class="ambient-glow"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="noise-overlay"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <main class="stage">
+    <div class="svg-container" id="svg-container">
+      <svg class="text-svg" viewBox="0 0 3216 1244" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <filter id="red-glow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <path
+          class="text-path"
+          id="text-path"
+          fill="none"
+          fill-rule="evenodd"
+          stroke="#ff3333"
+          stroke-width="21.638"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m 714.5896,376.67346 c 0,0 48.82072,83.15197 97.2036,20.79476 28.72718,-37.02438 4.6022,-132.26302 -179.71202,-71.07674 -407.93831,135.42216 -67.92178,445.661 19.21267,286.59096 64.99133,-118.64622 -510.57655,160.86018 -201.13487,246.2876 195.63533,6.98342 315.36781,-179.81001 406.37453,-322.9104 10.94611,-16.41917 87.56892,-169.66478 82.09586,-191.55701 -12.87905,-51.51616 -201.45603,301.88723 -207.97618,429.63501 -5.70722,111.82014 199.91737,-57.61006 181.97914,-161.4552 -13.63176,-78.91503 -193.37215,148.23322 -71.14973,209.34446 92.35838,46.17917 95.41888,-101.11995 168.1306,-169.24979 91.6814,-85.90416 125.587,25.83842 107.5747,7.45252 -83.3884,-85.11817 -195.34312,135.48451 -122.48582,133.03768 94.59822,-3.17697 150.86342,-38.48496 191.87452,-129.1468 13.3952,-29.61231 132.3708,-200.28881 89.2032,-226.95642 -32.2572,-19.92748 -192.6592,63.24971 -180.5397,39.00641 11.7194,-23.44277 122.8781,-21.75008 191.2713,-49.3743 53.703,-21.69084 68.447,-73.52421 72.8593,-88.45077 14.2978,-48.369 -37.7382,6.51117 -44.5093,60.96135 -2.5812,20.7568 327.4869,-86.75408 314.4492,-61.79816 -7.7621,14.85772 -283.3983,68.96143 -306.5706,89.901 -121.6336,109.91385 -153.7879,250.67614 -160.3993,311.15316 -7.8435,71.74697 77.2965,-29.22368 162.8234,-98.51505 85.5269,-69.29137 49.3058,-105.84421 32.1542,-82.09586 -8.8937,12.31438 -16.9733,28.90172 -9.5779,35.57487 32.0956,28.96112 142.0667,-52.58866 109.8032,-5.81512 -20.7476,30.07855 -92.6009,94.13604 -50.6257,117.67073 16.3045,9.14159 69.3763,-55.494 111.8527,-92.2935 30.3519,-26.29535 61.364,-38.94452 45.4977,-39.74401 -25.3129,-1.2755 -128.0447,102.26067 -69.4395,134.08992 63.9966,34.7574 146.4748,-73.64254 124.5121,-129.30099 -3.9815,-10.08995 -44.4627,-38.52606 -32.4963,-1.71033 9.5778,21.89223 72.2767,153.88947 92.8007,116.94633 20.5239,-36.94314 157.3504,-424.16196 151.8773,-447.42246 -5.473,-23.26049 -129.7485,406.24146 -136.1423,429.63502 -20.9476,76.64287 97.4674,-273.1251 178.5585,-158.71866 91.435,129.00003 -237.8762,206.044 -151.1932,179.92675 14.1879,-4.7293 194.7645,9.31997 225.0795,-51.3099 23.0127,-46.02528 44.328,-115.24928 52.0369,-173.77319 4.1758,-31.70128 40.5647,-98.06256 6.8525,-101.39967 -43.7028,-4.32606 15.9407,67.21703 -17.0605,130.63981 -28.774,55.29859 -70.266,169.96856 -51.4068,176.00313 68.1307,21.80048 186.2825,-231.76199 141.6154,-199.08247 -13.3658,9.77874 -27.3791,30.34569 -20.524,43.10033 34.4655,64.12584 61.0742,-71.43884 108.777,-32.15421 31.2111,25.70322 -124.6937,182.47612 -30.7859,125.19618 43.4436,-26.49886 115.4139,-165.38931 88.253,-154.61388 -18.9071,7.50097 -43.7844,54.73058 -16.4191,54.73058 27.3653,0 87.5338,-90.67339 80.7276,-29.41768 -8.8597,79.73682 -112.2198,128.16064 -41.048,120.40726 85.212,-9.28288 15.9363,-47.95036 91.0382,-115.78434 42.4162,-38.3114 173.2519,-33.51902 23.7704,-7.61435 -68.8975,11.93971 -105.6134,162.75254 -3.9791,135.02894 99.0889,-27.02928 80.7916,-205.59245 141.0854,-150.96435 11.7426,10.63914 -24.9823,-29.24628 -43.2507,26.71252 -21.1553,64.80214 -61.9099,147.06563 9.4994,115.62725 60.7802,-26.75885 58.9391,-86.99406 137.5852,-137.77971 7.7667,-5.01536 9.2674,-37.2572 -8.6104,-38.28292 -10.0703,-0.57777 -17.8238,28.27872 0.4008,42.38772 35.0809,27.15867 118.4853,43.07344 71.8825,103.15809 -9.2418,11.91536 -59.0748,29.76718 -47.38,1.23894 10.295,-25.11326 462.8397,169.2768 810.817,-54.00011" />
+      </svg>
+      <div class="spark-layer" id="spark-layer"></div>
+    </div>
+
+    <p class="hero-caption">Desarrollo · Diseño · Potencia</p>
+  </main>
+
+  <aside class="command-dock" aria-label="Panel de control">
+    <div class="dock-status">
+      <span class="status-dot"></span>
+      <span class="status-label">Sistema activo</span>
+    </div>
+    <div class="dock-divider"></div>
+    <div class="dock-brand">
+      <span class="dock-mark" aria-hidden="true">⚡</span>
+      <div>
+        <p class="dock-name">Electrobirras</p>
+        <p class="dock-tagline">Energía digital a medida</p>
+      </div>
+    </div>
+    <button class="toggle-btn active" id="glow-toggle" type="button">
+      <span class="toggle-label">Alta tensión</span>
+    </button>
+    <a href="marketing-demo.html" class="dock-demo-link">Idea Finder →</a>
+  </aside>
+
+  <div class="meter-unit" aria-hidden="true">
+    <span class="meter-label">SIG</span>
+    <div class="as-bars"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+
+  <script src="fondo.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
