@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Idea Finder — Electrobirras</title>
+  <meta name="description" content="Descubre las mejores estrategias de marketing para tu negocio. Herramienta gratuita de Electrobirras basada en 139 tácticas probadas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="marketing-demo.css">
+</head>
+<body>
+
+  <div class="demo-bg" aria-hidden="true"></div>
+  <div class="demo-grid" aria-hidden="true"></div>
+
+  <header class="demo-header">
+    <a href="index.html" class="demo-logo">
+      <span aria-hidden="true">⚡</span>
+      Electrobirras
+    </a>
+    <span class="demo-badge">Demo · Engineering as Marketing</span>
+  </header>
+
+  <main class="demo-main">
+    <section class="demo-hero">
+      <p class="demo-eyebrow">139 tácticas probadas · Quiz interactivo</p>
+      <h1>Marketing Idea Finder</h1>
+      <p class="demo-lead">
+        Responde 4 preguntas y recibe un plan personalizado con las estrategias
+        que mejor encajan con tu negocio, etapa y presupuesto.
+      </p>
+    </section>
+
+    <div class="quiz-shell">
+      <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="4">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="progress-label" id="progress-label">Paso 1 de 4</p>
+
+      <div id="quiz-panel">
+        <div id="quiz-step"></div>
+        <div class="quiz-nav">
+          <button type="button" class="btn btn-ghost" id="btn-back" disabled>← Atrás</button>
+          <button type="button" class="btn btn-primary" id="btn-next" disabled>Siguiente →</button>
+        </div>
+      </div>
+
+      <div id="results-panel" hidden>
+        <div class="results-header">
+          <h2>Tus 5 ideas prioritarias</h2>
+          <p id="results-summary" class="results-summary"></p>
+        </div>
+        <div id="ideas-list" class="ideas-list"></div>
+        <div class="results-actions">
+          <button type="button" class="btn btn-ghost" id="btn-restart">↺ Empezar de nuevo</button>
+          <button type="button" class="btn btn-primary" id="btn-copy">Copiar plan</button>
+        </div>
+        <aside class="cta-panel">
+          <p class="cta-eyebrow">¿Quieres que lo implementemos?</p>
+          <h3>Electrobirras convierte ideas en resultados</h3>
+          <p>Landing pages, herramientas gratuitas, SEO, ads y código a medida para tu estrategia de marketing.</p>
+          <a href="mailto:contacto@electrobirras.com?subject=Quiero%20implementar%20mi%20plan%20de%20marketing" class="btn btn-cta">
+            Solicitar consulta gratuita →
+          </a>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="demo-footer">
+    <p>Basado en la skill <strong>marketing-ideas</strong> · 139 estrategias de growth</p>
+    <a href="index.html">← Volver al inicio</a>
+  </footer>
+
+  <script src="marketing-demo.js"></script>
+</body>
+</html>
